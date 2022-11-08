@@ -17,6 +17,9 @@ const Header = () => {
       <Link to='/service'>
       <li className='font-bold'>Service</li>
       </Link>
+      <Link to='/blog'>
+      <li className='font-bold'>Blog</li>
+      </Link>
       </ul>
     </div>
     
@@ -32,6 +35,9 @@ const Header = () => {
       </Link>
       <Link to='/service'>
       <li className='font-bold mx-4'>Service</li>
+      </Link>
+      <Link to='/blog'>
+      <li className='font-bold mx-4'>Blog</li>
       </Link>
     </ul>
   </div>

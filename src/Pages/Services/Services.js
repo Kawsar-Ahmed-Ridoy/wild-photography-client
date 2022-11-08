@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import ServiceCardAll from './ServiceCardAll/ServiceCardAll';
-const Service = () => {
-    const [service, setService] = useState([])
+import ServiceCardAll from './ServicesCardAll/ServicesCardAll';
+const Services = () => {
+    const [services, setServices] = useState([])
     useEffect(()=>{
         fetch('service.json')
         .then(res => res.json())
-        .then(data => setService(data))
+        .then(data => setServices(data))
     },[])
     return (
         <div className='mb-16 max-w-screen-xl mx-auto'>
@@ -17,9 +16,9 @@ const Service = () => {
 
             <div className='flex justify-around  align-middle flex-wrap '>
                 {
-                    service.map(servic => <ServiceCardAll
-                    key={servic.id}
-                    servic={servic}
+                    services.map(service => <ServiceCardAll
+                    key={service.id}
+                    service={service}
                     ></ServiceCardAll>)
                 }
             </div>
@@ -27,4 +26,4 @@ const Service = () => {
     );
 };
 
-export default Service;
+export default Services;

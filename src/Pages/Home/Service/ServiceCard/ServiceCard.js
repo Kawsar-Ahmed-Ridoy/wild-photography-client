@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const ServiceCardAll = ({servic}) => {
-    const { picture, name, title, price, details } = servic;
-    return (
-        <div>
+const ServicesCard = ({ servic }) => {
+  const { picture, name, title, price, details } = servic;
+  return (
+    <div>
       <div className="card card-compact w-96 bg-base-100 shadow-xl mb-10">
         <figure>
           <img src={picture} className="h-60" alt="Shoes" />
@@ -20,7 +20,7 @@ const ServiceCardAll = ({servic}) => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
-export default ServiceCardAll;
+export default ServicesCard;
