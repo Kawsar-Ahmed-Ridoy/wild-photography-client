@@ -1,36 +1,39 @@
 [
-    {
-      "id": "633548efbb7ba3d66b9c91ea",
-      "picture": "https://i.postimg.cc/Pr6H9Zny/122223874-gettyimages-590685251.jpg",
-      "name": "Zebra",
-      "title": "Animal",
-      "details": "Zebras are African equines with distinctive black-and-white striped coats. There are three living species: the Grévy's zebra, plains zebra, and the mountain zebra. Zebras share the genus Equus with horses and asses, the three groups being the only living members of the family Equidae. "
-    },
-   
-    {
-      "id": "633548efc6c9c81d7758386c",
-      "picture": "https://i.postimg.cc/wxfGVXmQ/hm-slider2-tiger-tree-frame.jpg",
-      "name": "Tiger",
-      "title": "Animal",
-      "details": "The tiger is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar.  Conservation status: Endangered (Population decreasing) Encyclopedia of Life Scientific name: Panthera tigris Length: 2.5 – 3.9 m (Male, Adult), 2 – 2.8 m (Female, Adult) Height: 80 – 110 cm (At Shoulder) Mass: 90 – 310 kg (Male, Adult), 65 – 170 kg (Female, Adult) Speed: 49 – 65 km/h (In Short Bursts) Size of territory: 60 – 100 km² (Male, Adult), 20 km² (Female, Adult) "
-    },
     {  
       "id": "633548efa479fb05b2293905",
-      "picture": "https://i.postimg.cc/Vsp3w9kL/qxyqxqjtu-WW187785.jpg",
+      "picture": "https://files.worldwildlife.org/wwfcmsprod/images/African_Elephant_Kenya_112367/story_full_width/qxyqxqjtu_WW187785.jpg",
       "name": "Elephant",
       "title": "Animal",
       "details": "Elephants are the largest existing land animals. Three living species are currently recognised: the African bush elephant, the African forest elephant, and the Asian elephant. They are the only surviving members of the family Elephantidae and the order Proboscidea. Mass: Asian elephant: 4,000 kg, African bush elephant: 6,000 kg, African forest elephant: 2,700 – 6,000 kg Gestation period: Asian elephant: 18 – 22 months, African bush elephant: 22 months Lifespan: Asian elephant: 48 years, African bush elephant: 60 – 70 years, African forest elephant: 60 – 70 years Length: Asian elephant: 5.5 – 6.5 m Height: Asian elephant: 2.8 m, African bush elephant: 3.2 m Speed: African bush elephant: 40 km/h"
     },
     {
         "id": "633548ef18af55603e541f89",
-        "picture": "https://i.postimg.cc/rw3TP6Rg/211125112643-bart-the-bear-ii-super-tease.jpg",
+        "picture": "https://cdn.cnn.com/cnnnext/dam/assets/211125112643-bart-the-bear-ii-super-tease.jpg",
         "name": "Bears",
         "title": "Animal",
         "details": "Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Scientific name: Ursidae Speed: Polar bear: 40 km/h, Brown bear: 56 km/h Lifespan: Giant panda: 20 years, Brown bear: 20 – 30 years Height: Polar bear: 1.8 – 2.4 m, Giant panda: 60 – 90 cm, Brown bear: 70 – 150 cm Higher classification: Caniformia Gestation period: Polar bear: 195 – 265 days,"
       },
     {
+        "id": "633548efc6c9c81d7758386c",
+        "picture": "https://book-my-safari.com/wp-content/uploads/2018/03/hm-slider2-tiger-tree-frame.jpg",
+        "name": "Tiger",
+        "title": "Animal",
+        "details": "The tiger is the largest living cat species and a member of the genus Panthera. It is most recognisable for its dark vertical stripes on orange fur with a white underside. An apex predator, it primarily preys on ungulates, such as deer and wild boar.  Conservation status: Endangered (Population decreasing) Encyclopedia of Life Scientific name: Panthera tigris Length: 2.5 – 3.9 m (Male, Adult), 2 – 2.8 m (Female, Adult) Height: 80 – 110 cm (At Shoulder) Mass: 90 – 310 kg (Male, Adult), 65 – 170 kg (Female, Adult) Speed: 49 – 65 km/h (In Short Bursts) Size of territory: 60 – 100 km² (Male, Adult), 20 km² (Female, Adult) "
+      },
+    {
+      "id": "633548efbb7ba3d66b9c91ea",
+      "picture": "https://ichef.bbci.co.uk/news/976/cpsprodpb/BAD8/production/_122223874_gettyimages-590685251.jpg",
+      "name": "Zebra",
+      "title": "Animal",
+      "details": "Zebras are African equines with distinctive black-and-white striped coats. There are three living species: the Grévy's zebra, plains zebra, and the mountain zebra. Zebras share the genus Equus with horses and asses, the three groups being the only living members of the family Equidae. "
+    },
+   
+    
+    
+    
+    {
       "id": "633548ef69707d697b645c4d",
-      "picture": "https://i.postimg.cc/637YbSRV/gettyimages-962721850-2000-241ebe8b739e4447a07fa1b26129c9d4.jpg",
+      "picture": "https://www.southernliving.com/thmb/cnvkesXCuKMKYedNqkcLjiIWHVM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gettyimages-962721850-2000-241ebe8b739e4447a07fa1b26129c9d4.jpg",
       "name": "Crocodiles",
       "title": "Animal",
       "details": "Crocodiles or true crocodiles are large semiaquatic reptiles that live throughout the tropics in Africa, Asia, the Americas and Australia. Lifespan: Saltwater crocodile: 70 years, Nile crocodile: 50 – 60 years Speed: Saltwater crocodile: 24 – 29 km/h, American crocodile: 32 km/h, Nile crocodile: 30 – 35 km/h  Scientific name: Crocodylidae Clutch size: Saltwater crocodile: 40 – 60, American crocodile: 30 – 70, Nile crocodile: 25 – 80"

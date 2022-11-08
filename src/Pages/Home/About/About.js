@@ -2,8 +2,11 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="mb-10 max-w-screen-xl mx-auto">
-      <h2 className="text-center text-4xl font-bold mb-8">About</h2>
+    <div className="mb-16 max-w-screen-xl mx-auto">
+      <div className="mb-8">
+      <h2 className="text-center text-4xl font-bold ">About</h2>
+      <p className='text-center  text-gray-500'>__________________</p>
+      </div>
       <div className="flex justify-around text-center align-middle flex-wrap">
         <div className="card w-96 h-96 py-7 shadow-xl mb-4">
           <div className="card-body">
