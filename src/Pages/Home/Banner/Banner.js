@@ -1,18 +1,19 @@
 import React from 'react';
-import image1 from '../../asset/image1.jpg'
-import image2 from '../../asset/image2.jpg'
-import image3 from '../../asset/image3.jpg'
+import image1 from '../../../asset/image1.jpg'
+import image2 from '../../../asset/image2.jpg'
+import image3 from '../../../asset/image3.jpg'
 
 const Banner = () => {
     return (
-        <div>
+        <div className='mb-10'>
       <>
-      <div style={{height:"90vh"}} className="carousel w-full ">
+      <div style={{height:"93vh"}} className="carousel w-full ">
   <div id="slide1" className="carousel-item relative w-full"> 
   <div className=" bg-black absolute opacity-50 h-full w-full"></div>
     <img src={image1} alt='' className="w-full" />
 
-    <div style={{height:"90vh", textTransform:'uppercase'}} className="absolute flex justify-center align-middle w-full text-center text-6xl  font-serif text-white"><h2 className='my-auto leading-tight'>welcome to my, wild<br/>  photography <br/>website</h2></div>
+    <div style={{height:"90vh", textTransform:'uppercase'}} className="absolute flex justify-center align-middle w-full text-center text-5xl
+      font-serif text-white"><h2 className='my-auto leading-tight'>welcome to my, wild<br/>  photography <br/>website</h2></div>
 
 
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
