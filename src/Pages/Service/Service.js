@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ServicesCard from './ServicesCard/ServicesCard';
-
-const Services = () => {
-    const [services, setServices] = useState([])
+import ServiceCardAll from './ServiceCardAll/ServiceCardAll';
+const Service = () => {
+    const [service, setService] = useState([])
     useEffect(()=>{
         fetch('service.json')
         .then(res => res.json())
-        .then(data => setServices(data))
+        .then(data => setService(data))
     },[])
     return (
         <div className='mb-16 max-w-screen-xl mx-auto'>
@@ -18,19 +17,14 @@ const Services = () => {
 
             <div className='flex justify-around  align-middle flex-wrap '>
                 {
-                    services.map(service => <ServicesCard
-                    key={service.id}
-                    service={service}
-                    ></ServicesCard>)
+                    service.map(servic => <ServiceCardAll
+                    key={servic.id}
+                    servic={servic}
+                    ></ServiceCardAll>)
                 }
-            </div>
-            <div className="text-center">
-            <Link to='/service'>
-            <button className='btn px-10 font-bold'>See All</button>
-            </Link>
             </div>
         </div>
     );
 };
 
-export default Services;
+export default Service;
