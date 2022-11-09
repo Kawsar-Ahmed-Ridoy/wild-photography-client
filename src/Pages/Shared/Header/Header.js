@@ -20,7 +20,7 @@ const Header = () => {
       <Link to='/blog'>
       <li className='font-bold'>Blog</li>
       </Link>
-      <Link to='/review'>
+      <Link to='/reviews'>
       <li className='font-bold'>My Reviews</li>
       </Link>
       </ul>
@@ -42,7 +42,7 @@ const Header = () => {
       <Link to='/blog'>
       <li className='font-bold mx-4'>Blog</li>
       </Link>
-      <Link to='/review'>
+      <Link to='/reviews'>
       <li className='font-bold mx-4'>My Reviews</li>
       </Link>
     </ul>

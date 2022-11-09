@@ -5,7 +5,7 @@ import CardDetails from "../../Pages/CardDetails/CardDetails";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
-import Review from "../../Pages/Review/Review";
+import Review from "../../Pages/Review/Review"
 import Services from "../../Pages/Services/Services";
 
 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
           loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
         },
         {
-          path: '/review',
+          path: '/reviews',
           element: <Review></Review>
         },
         {
