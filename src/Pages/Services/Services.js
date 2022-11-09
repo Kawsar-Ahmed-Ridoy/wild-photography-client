@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ServiceCardAll from './ServicesCardAll/ServicesCardAll';
+import ServicesCardAll from './ServicesCardAll/ServicesCardAll'
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(()=>{
@@ -16,10 +16,10 @@ const Services = () => {
 
             <div className='flex justify-around  align-middle flex-wrap '>
                 {
-                    services.map(service => <ServiceCardAll
+                    services.map(service => <ServicesCardAll
                     key={service.id}
                     service={service}
-                    ></ServiceCardAll>)
+                    ></ServicesCardAll>)
                 }
             </div>
         </div>

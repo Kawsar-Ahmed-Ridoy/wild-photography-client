@@ -14,11 +14,14 @@ const Header = () => {
       <Link to='/'>
       <li className='font-bold'>Home</li>
       </Link>
-      <Link to='/service'>
-      <li className='font-bold'>Service</li>
+      <Link to='/services'>
+      <li className='font-bold'>Services</li>
       </Link>
       <Link to='/blog'>
       <li className='font-bold'>Blog</li>
+      </Link>
+      <Link to='/review'>
+      <li className='font-bold'>Review</li>
       </Link>
       </ul>
     </div>
@@ -33,11 +36,14 @@ const Header = () => {
       <Link to='/'>
       <li className='font-bold mx-4'>Home</li>
       </Link>
-      <Link to='/service'>
-      <li className='font-bold mx-4'>Service</li>
+      <Link to='/services'>
+      <li className='font-bold mx-4'>Services</li>
       </Link>
       <Link to='/blog'>
       <li className='font-bold mx-4'>Blog</li>
+      </Link>
+      <Link to='/review'>
+      <li className='font-bold mx-4'>Review</li>
       </Link>
     </ul>
   </div>

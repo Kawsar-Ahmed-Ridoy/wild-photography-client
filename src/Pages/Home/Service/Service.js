@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ServicesCard from './ServiceCard/ServiceCard';
+import ServiceCard from './ServiceCard/ServiceCard';
+
 
 const Service = () => {
     const [service, setService] = useState([])
@@ -18,10 +19,10 @@ const Service = () => {
 
             <div className='flex justify-around  align-middle flex-wrap '>
                 {
-                    service.map(servic => <ServicesCard
+                    service.map(servic => <ServiceCard
                     key={servic.id}
                     servic={servic}
-                    ></ServicesCard>)
+                    ></ServiceCard>)
                 }
             </div>
             <div className="text-center">

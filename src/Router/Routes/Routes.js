@@ -1,6 +1,10 @@
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
+import CardDetails from "../../Pages/CardDetails/CardDetails";
 import Home from "../../Pages/Home/Home";
+import Login from "../../Pages/Login/Login";
+import Register from "../../Pages/Register/Register";
+import Review from "../../Pages/Review/Review";
 import Services from "../../Pages/Services/Services";
 
 
@@ -16,12 +20,29 @@ const router = createBrowserRouter([
             element: <Home></Home>
         },
         {
-            path: '/service',
+            path: '/services',
             element: <Services></Services>
+        },
+        {
+          path: '/service/:id',
+          element: <CardDetails></CardDetails>,
+          loader: ({params}) => fetch(`service.json/services${params.id}`)
+        },
+        {
+          path: '/review',
+          element: <Review></Review>
         },
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/login',
+          element: <Login></Login>
+        },
+        {
+          path: '/register',
+          element: <Register></Register>
         }
       ]
     }
