@@ -4,7 +4,7 @@ import logo from '../../../../src/logo.png'
 
 const Header = () => {
     return (
-        <div className="navbar bg-base-100 px-8 sticky top-0 z-50">
+        <div className="navbar bg-base-100 px-8 sticky top-0 z-50 bg-gray-100">
   <div className="navbar-start ">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -21,7 +21,7 @@ const Header = () => {
       <li className='font-bold'>Blog</li>
       </Link>
       <Link to='/review'>
-      <li className='font-bold'>Review</li>
+      <li className='font-bold'>My Reviews</li>
       </Link>
       </ul>
     </div>
@@ -43,7 +43,7 @@ const Header = () => {
       <li className='font-bold mx-4'>Blog</li>
       </Link>
       <Link to='/review'>
-      <li className='font-bold mx-4'>Review</li>
+      <li className='font-bold mx-4'>My Reviews</li>
       </Link>
     </ul>
   </div>

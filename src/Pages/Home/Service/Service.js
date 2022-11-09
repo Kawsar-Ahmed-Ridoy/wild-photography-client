@@ -6,7 +6,7 @@ import ServiceCard from './ServiceCard/ServiceCard';
 const Service = () => {
     const [service, setService] = useState([])
     useEffect(()=>{
-        fetch('service.json')
+        fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setService(data))
     },[])
@@ -20,7 +20,7 @@ const Service = () => {
             <div className='flex justify-around  align-middle flex-wrap '>
                 {
                     service.map(servic => <ServiceCard
-                    key={servic.id}
+                    key={servic._id}
                     servic={servic}
                     ></ServiceCard>)
                 }

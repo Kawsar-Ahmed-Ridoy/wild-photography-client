@@ -26,9 +26,9 @@ const router = createBrowserRouter([
             element: <Services></Services>
         },
         {
-          path: '/service/:id',
+          path: '/details/:id',
           element: <CardDetails></CardDetails>,
-          loader: ({params}) => fetch(`service.json/services${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
         },
         {
           path: '/review',
