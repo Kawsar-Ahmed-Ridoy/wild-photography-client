@@ -1,3 +1,4 @@
+import ErrorPage from "../../ErrorPage/ErrorPage";
 import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import CardDetails from "../../Pages/CardDetails/CardDetails";
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     {
       path: '/',
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path:'/',
