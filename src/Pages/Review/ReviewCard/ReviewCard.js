@@ -41,11 +41,11 @@ const ReviewCard = ({ user, review, handleDelete }) => {
       </div>
 
       <div>
-        <h4 className="capitalize">
+        <h4 className="capitalize text-center">
           Name: {names ? names : <small>anonymous</small>}
         </h4>
         <br />
-        <span className="badge badge-ghost badge-sm">Email: {email}</span>
+        <span className="badge badge-ghost badge-sm text-center">Email: {email}</span>
       </div>
 
       <div className="avatar">
