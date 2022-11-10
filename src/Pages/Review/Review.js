@@ -2,14 +2,15 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 import ReviewCard from "./ReviewCard/ReviewCard";
 import toast from "react-hot-toast";
+import useTitle from "../../hooks/useTitle";
 
 
 const Review = () => {
   const { user, logOut } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
-
+  useTitle('My Reviews')
   useEffect(() => {
-    fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+    fetch(`https://wild-photography-server.vercel.app/reviews?email=${user?.email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("userToken")}`
       }
@@ -31,7 +32,7 @@ const Review = () => {
       "Are you sure, you  want to delete this review?"
     );
     if (proceed) {
-      fetch(`http://localhost:5000/reviews/${_id}`, {
+      fetch(`https://wild-photography-server.vercel.app/reviews/${_id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${localStorage.getItem("userToken")}`

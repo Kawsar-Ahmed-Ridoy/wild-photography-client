@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link,  useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 import SocialLogin from "./SocialLogin/SocialLogin";
 
 const Login = () => {
@@ -8,6 +9,7 @@ const Login = () => {
   const { login } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  useTitle('Login')
   
   const from = location.state?.from?.pathname || "/";
 
@@ -27,7 +29,7 @@ const Login = () => {
 
         console.log(currentUser);
 
-        fetch("http://localhost:5000/jwt", {
+        fetch("https://wild-photography-server.vercel.app/jwt", {
           method: "POST",
           headers: {
             "content-type": "application/json",

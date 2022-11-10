@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 import SocialLogin from "../Login/SocialLogin/SocialLogin";
 
 const Register = () => {
@@ -8,6 +9,7 @@ const Register = () => {
   const { createUser, loading } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  useTitle('Register');
   if (loading) {
     return <progress className="progress w-full "></progress>;
   }

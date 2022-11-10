@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 import ServicesCardAll from "./ServicesCardAll/ServicesCardAll";
 const Services = () => {
   const { loading } = useContext(AuthContext);
-
   const [services, setServices] = useState([]);
+  useTitle('Services');
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://wild-photography-server.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
