@@ -6,8 +6,8 @@ import { AuthContext } from "../../context/AuthProvider/AuthProvider";
 const CardDetails = () => {
   const { _id, picture, name, title, price, details } = useLoaderData();
   const { user } = useContext(AuthContext);
-console.log(user);
-  const handleReview = event =>{
+  console.log(user);
+  const handleReview = (event) => {
     event.preventDefault();
     const form = event.target;
     const names = form.name.value;
@@ -15,38 +15,35 @@ console.log(user);
     const message = form.message.value;
 
     const review = {
-        service: _id,
-        servicePicture: picture,
-        serviceName: name,
-        serviceTitle: title,
-        servicePrice: price,
-        serviceDetails: details,
-        names,
-        email,
-        message,
+      service: _id,
+      servicePicture: picture,
+      serviceName: name,
+      serviceTitle: title,
+      servicePrice: price,
+      serviceDetails: details,
+      names,
+      email,
+      message
+    };
 
-    }
-
-
-    fetch('http://localhost:5000/reviews', {
-      method: 'POST',
+    fetch("http://localhost:5000/reviews", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json',
-        authorization: `Bearer ${localStorage.getItem('userToken')}`
+        "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("userToken")}`
       },
       body: JSON.stringify(review)
     })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data)
-        if(data.acknowledged){
-          alert('Review Added')
-          form.reset()
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          alert("Review Added");
+          form.reset();
         }
       })
-      .catch(err => console.error(err))
-
-  }
+      .catch((err) => console.error(err));
+  };
 
   return (
     <div>
@@ -79,7 +76,7 @@ console.log(user);
           <p className="text-center  text-gray-500">__________________</p>
         </div>
         <h4 className="text-center mb-4 font-bold capitalize">
-          If you like my photography of my website, <br /> please give a review.
+          If you like photography of my website, <br /> please give a review.
         </h4>
         <div className="hero ">
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -113,9 +110,10 @@ console.log(user);
 
               <div className="form-control mt-6">
                 <textarea
-                  className="textarea textarea-bordered h-24" placeholder="Please Review"
-                  type='text'
-                  name='message'
+                  className="textarea textarea-bordered h-24"
+                  placeholder="Please Review"
+                  type="text"
+                  name="message"
                 ></textarea>
               </div>
               <div className="form-control mt-6">

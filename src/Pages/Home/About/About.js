@@ -4,8 +4,8 @@ const About = () => {
   return (
     <div className="mb-16 max-w-screen-xl mx-auto">
       <div className="mb-8">
-      <h2 className="text-center text-4xl font-bold ">About</h2>
-      <p className='text-center  text-gray-500'>__________________</p>
+        <h2 className="text-center text-4xl font-bold ">About</h2>
+        <p className="text-center  text-gray-500">__________________</p>
       </div>
       <div className="flex justify-around text-center align-middle flex-wrap">
         <div className="card w-96 h-96 py-7 shadow-xl mb-4">
@@ -28,7 +28,12 @@ const About = () => {
           <div className="card-body">
             <h2 className=" text-center text-2xl font-bold">Zambia</h2>
             <p className="text-center">
-            In 2012-2013 I lived in Zambia for a year and I have since made several repeat visits to the country. I have primarily focused on documenting the wildlife of the Luangwa Valley and the region’s dramatic seasonal variations. I have also spent time in Liuwa Plain, Kafue, Kasanka and Lower Zambezi National Parks. Here are just a few of my favourite images from the country.
+              In 2012-2013 I lived in Zambia for a year and I have since made
+              several repeat visits to the country. I have primarily focused on
+              documenting the wildlife of the Luangwa Valley and the region’s
+              dramatic seasonal variations. I have also spent time in Liuwa
+              Plain, Kafue, Kasanka and Lower Zambezi National Parks. Here are
+              just a few of my favourite images from the country.
             </p>
           </div>
         </div>
