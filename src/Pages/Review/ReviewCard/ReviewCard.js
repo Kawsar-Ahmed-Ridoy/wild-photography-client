@@ -1,5 +1,7 @@
 import React from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
+const notify = () => toast.success('Review Update Successfully.');
 
 const ReviewCard = ({ review, handleDelete }) => {
 
@@ -67,8 +69,9 @@ const ReviewCard = ({ review, handleDelete }) => {
             placeholder="Edit Review"
           ></textarea>
           <div className="modal-action">
-            <label htmlFor="my-modal" className="btn">
+            <label onClick={notify} htmlFor="my-modal" className="btn">
               Update
+          <Toaster />
             </label>
           </div>
         </div>

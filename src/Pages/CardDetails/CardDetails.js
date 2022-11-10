@@ -2,7 +2,9 @@ import React, { useContext } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
+const notify = () => toast.success('Service Added Successfully.');
 const CardDetails = () => {
   const { _id, picture, name, title, price, details } = useLoaderData();
   const { user } = useContext(AuthContext);
@@ -64,7 +66,10 @@ const CardDetails = () => {
           </p>
         </div>
         <div className="card-actions justify-between p-10 mx-auto mb-8">
-          <button className="btn px-28 ">Add Service</button>
+          
+        
+          <button onClick={notify} className="btn px-28 ">Add Service</button>
+          <Toaster />
         </div>
       </div>
 
