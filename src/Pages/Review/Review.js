@@ -13,8 +13,27 @@ const Review = () => {
       .then(data => setReviews(data))
     },[user?.email])
 
+    const handleDelete = _id =>{
+      const proceed = window.confirm('Are you sure, you  want to delete this review?');
+      if(proceed){
+          fetch(`http://localhost:5000/reviews/${_id}`, {
+              method: 'DELETE'
+          })
+          .then(res => res.json())
+          .then(data => {
+              console.log(data);
+              if(data.deletedCount > 0 ){
+                  alert('delete success');
+                  const remaining = reviews.filter(rev => rev._id !== _id);
+                  setReviews(remaining)
+              }
+          })
+      }
+  }
+
     return (
-        <div style={{height: "auto", marginTop: '25px'}}>
+        <div>
+          <div style={{height: "auto", marginTop: '25px'}}>
             <div className="mb-12">
     <div className="mb-8">
         <h2 className="text-center text-4xl font-bold ">My Reviews</h2>
@@ -22,13 +41,22 @@ const Review = () => {
       </div>
    
       {
+            reviews.length? 
+      <>
+      {
         reviews.map(review => <ReviewCard
         key={review._id}
         review={review}
+        handleDelete={handleDelete}
         ></ReviewCard>)
       }
-     
-</div>
+      </>
+     : <div style={{height: "45vh"}} className="flex  justify-center align-middle w-full text-center">
+     <h4 className='text-5xl text-center my-auto '>No reviews were added!</h4> </div>
+}
+</div> 
+</div> 
+          
         </div>
     );
 };

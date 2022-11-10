@@ -1,9 +1,16 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext)
+    const {createUser, loading} = useContext(AuthContext);
+    const location = useLocation();
+  const navigate = useNavigate();
+  if(loading){
+    return <progress className="progress w-full "></progress>
+}
+  const from = location.state?.from?.pathname || '/';
+
     const handleRegister = event =>{
         event.preventDefault();
         const form = event.target;
@@ -13,6 +20,8 @@ const Register = () => {
         .then(result =>{
           const user = result.user;
           console.log(user);
+          form.reset();
+          navigate(from,{replace: true})
         })
         .catch(err => console.error(err))
     }
@@ -44,7 +53,7 @@ const Register = () => {
           </label>
           <input type="password" name='password' placeholder="password" className="input input-bordered" required/>
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover"><Link to='/login'>Already have an account? <span className='font-bold'>Login</span></Link></a>
+            <small className="label-text-alt link link-hover"><Link to='/login'>Already have an account? <span className='font-bold'>Login</span></Link></small>
             
           </label>
         </div>

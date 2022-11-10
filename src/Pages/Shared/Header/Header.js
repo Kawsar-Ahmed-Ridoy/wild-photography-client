@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../../src/logo.png'
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Header = () => {
+  const {user, logOut} =useContext(AuthContext);
+
+  const handleLogOut = ()=>{
+      logOut()
+      .then()
+      .catch()
+  }
+
     return (
         <div className="navbar bg-base-100 px-8 sticky top-0 z-50 bg-gray-100">
   <div className="navbar-start ">
@@ -20,9 +29,12 @@ const Header = () => {
       <Link to='/blog'>
       <li className='font-bold'>Blog</li>
       </Link>
-      <Link to='/reviews'>
-      <li className='font-bold'>My Reviews</li>
-      </Link>
+      {
+        user?.email ? 
+        <><Link to='/reviews'>
+        <li className='font-bold'>My Reviews</li>
+        </Link></> : <></>
+      }
       </ul>
     </div>
     
@@ -42,13 +54,23 @@ const Header = () => {
       <Link to='/blog'>
       <li className='font-bold mx-4'>Blog</li>
       </Link>
-      <Link to='/reviews'>
-      <li className='font-bold mx-4'>My Reviews</li>
-      </Link>
+      {
+        user?.email ? 
+        <><Link to='/reviews'>
+        <li className='font-bold mx-4'>My Reviews</li>
+        </Link></> : <></>
+      }
     </ul>
   </div>
   <div className="navbar-end">
-    <a href='/' className="btn">Get started</a>
+    
+    {
+      user?.email ? 
+      <>
+        <button onClick={handleLogOut} className="btn">Logout</button>
+      </> : 
+      <Link to='/login' className="btn">LogIn</Link>
+    }
   </div>
 </div>
     );

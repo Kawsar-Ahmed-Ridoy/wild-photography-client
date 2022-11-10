@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
-const ReviewCard = ({review}) => {
+const ReviewCard = ({review, handleDelete}) => {
     const {auth} = useContext(AuthContext)
-    const {names, email, message, servicePicture, serviceName ,serviceTitle, servicePrice, } = review;
-    return (
-        <div className=" w-full border h-28 flex justify-between items-center flex-wrap px-4">
+    const {_id, names, email, message, servicePicture, serviceName ,serviceTitle, servicePrice, } = review;
 
-                
+    return (
+        <div className=" w-full border h-28 flex  justify-between items-center flex-wrap px-4">
                 <div className="flex items-center space-x-3">
+                <div className="flex flex-row-reverse">
+                    
+                <button onClick={() => handleDelete(_id)} className='btn btn-outline'>x</button>
+                </div>
                   <div className="avatar">
                     <div className="mask mask-squircle w-24 h-24">
                       <img src={servicePicture} alt="Avatar Tailwind CSS Component" />
@@ -48,6 +51,7 @@ const ReviewCard = ({review}) => {
                       <img src={servicePicture} alt="Avatar Tailwind CSS Component" />
                     </div>
                 </div>
+                    <button className='btn '>Edit</button>
            
           
         </div>

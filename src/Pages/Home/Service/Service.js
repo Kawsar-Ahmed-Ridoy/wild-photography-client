@@ -11,8 +11,8 @@ const Service = () => {
         .then(data => setService(data))
     },[])
     return (
-        <div className='mb-16 max-w-screen-xl mx-auto'>
-            <div className='mb-8'>
+        <div className='mb-16 mt-12 max-w-screen-xl mx-auto'>
+            <div className='mb-8 '>
             <h1 className='text-center text-4xl font-bold '>Service</h1>
             <p className='text-center  text-gray-500'>__________________</p>
             </div>
@@ -26,7 +26,7 @@ const Service = () => {
                 }
             </div>
             <div className="text-center">
-            <Link to='/service'>
+            <Link to='/services'>
             <button className='btn px-10 font-bold'>See All</button>
             </Link>
             </div>
