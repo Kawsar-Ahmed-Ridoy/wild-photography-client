@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
-  const {login , loading, setLoading} = useContext(AuthContext);
+  const {login , loading} = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   if(loading){
@@ -31,7 +32,8 @@ const Login = () => {
           fetch('http://localhost:5000/jwt', {
             method: 'POST',
             headers: {
-              'content-type': 'application/json'
+              'content-type': 'application/json',
+              authorization: `Bearer ${localStorage.getItem('userToken')}`
             },
             body: JSON.stringify(currentUser)
           })
@@ -39,9 +41,9 @@ const Login = () => {
           .then(data => {
             console.log(data);
             localStorage.setItem("userToken", data.token)
+            navigate(from,{replace: true});
           })
 
-          // navigate(from,{replace: true});
         })
         .catch(err => console.error(err))
     }
@@ -74,9 +76,7 @@ const Login = () => {
         <div className="form-control mt-6">
           <input className="btn btn-outline px-36" type='submit' value='Login'/>
         </div>
-        <div className="form-control ">
-          <button className="btn ">Google Login</button>
-        </div>
+        <SocialLogin></SocialLogin>
       </form>
     </div>
   </div>

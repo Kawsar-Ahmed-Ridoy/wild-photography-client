@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 const Register = () => {
     const {createUser, loading} = useContext(AuthContext);
@@ -58,11 +59,9 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control ">
-        <input className="btn px-36" type='submit' value='Register'/>
+        <input className="btn btn-outline px-36" type='submit' value='Register'/>
         </div>
-        <div className="form-control ">
-          <button className="btn btn-outline">Google Login</button>
-        </div>
+        <SocialLogin></SocialLogin>
       </form>
     </div>
   </div>

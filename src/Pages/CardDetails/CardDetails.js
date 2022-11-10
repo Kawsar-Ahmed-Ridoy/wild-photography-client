@@ -31,7 +31,8 @@ console.log(user);
     fetch('http://localhost:5000/reviews', {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        authorization: `Bearer ${localStorage.getItem('userToken')}`
       },
       body: JSON.stringify(review)
     })
@@ -90,7 +91,7 @@ console.log(user);
                 <input
                   type="text"
                   name="name"
-                  defaultValue={user?.name}
+                  defaultValue={user?.displayName}
                   placeholder="Name "
                   className="input input-bordered"
                   require
