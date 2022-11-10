@@ -66,6 +66,7 @@ const Review = () => {
                   key={review._id}
                   review={review}
                   handleDelete={handleDelete}
+                  user={user}
                 ></ReviewCard>
               ))}
             </>
@@ -76,7 +77,7 @@ const Review = () => {
             >
               <h4 className="text-5xl text-center my-auto ">
                 No reviews were added!
-              </h4>{" "}
+              </h4>
             </div>
           )}
         </div>

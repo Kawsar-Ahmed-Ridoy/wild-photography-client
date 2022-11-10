@@ -119,6 +119,7 @@ const CardDetails = () => {
                   placeholder="Please Review"
                   type="text"
                   name="message"
+                  required
                 ></textarea>
               </div>
               <div className="form-control mt-6">

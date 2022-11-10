@@ -1,10 +1,9 @@
 import React from "react";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
-const notify = () => toast.success('Review Update Successfully.');
+const notify = () => toast.success("Review Update Successfully.");
 
-const ReviewCard = ({ review, handleDelete }) => {
-
+const ReviewCard = ({ user, review, handleDelete }) => {
   const {
     _id,
     names,
@@ -37,8 +36,8 @@ const ReviewCard = ({ review, handleDelete }) => {
       </div>
 
       <div>
-        <h5 className="font-bold">Review</h5>
-        <p>{message}</p>
+        <h5 className="font-bold text-center">Review</h5>
+        <p className="center">{message}</p>
       </div>
 
       <div>
@@ -51,9 +50,10 @@ const ReviewCard = ({ review, handleDelete }) => {
 
       <div className="avatar">
         <div className="rounded-full w-12 h-12">
-          <img src={servicePicture} alt="Avatar Tailwind CSS Component" />
+          <img src={user?.photoURL} alt="Avatar Tailwind CSS Component" />
         </div>
       </div>
+
       {/* The button to open modal */}
       <label htmlFor="my-modal" className="btn">
         edit
@@ -71,7 +71,7 @@ const ReviewCard = ({ review, handleDelete }) => {
           <div className="modal-action">
             <label onClick={notify} htmlFor="my-modal" className="btn">
               Update
-          <Toaster />
+              <Toaster />
             </label>
           </div>
         </div>
